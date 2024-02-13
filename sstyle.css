@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(184,165,119);
+}
+
+.landing{
+    width: 100%;
+    height: 100%;
+   
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+    url(Fox-hd-wallpaper.jpg) no-repeat ;
+    /* gradient is from top to down and the 
+   mix of the top part is black and the bottom is also black  */
+    
+    /* ---gradient is to create a semi-transparent
+    overlay on top of the background image --- */
+
+    /* no-repeat: ensures that the background image is not repeated. */
+
+    background-size: cover;
+    background-position: center top; 
+    /* Without this and background-position: center bottom; at 100%
+    while landing the the half of the face of the fox was in hidding  */ 
+   
+    animation: landinganim 4s forwards;
+}
+
+@keyframes landinganim {
+    0%,
+    50%{
+        clip-path: polygon(50% 0,70% 0,100% 0,100% 100%,0 100%,0 0,30% 0);
+    }
+    100%{
+        clip-path: polygon(50% 4%,70% 10%,95% 0,95% 87%,5% 100%,5% 15%,
+        31% 10%);
+        background-position: center bottom; 
+    }
+    
+}
+
+.bg{
+    /* creating an additional background element on top of the existing 
+.landing element. */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(184,165,119);
+    position: absolute;
+    top:0;
+    left:0;
+    /* top: 0; left: 0; ensures that the element is positioned at the 
+    top-left corner of its containing element */
+
+    z-index: 10;
+    /* Sets the stacking order of the .bg element*/
+    /* higher the z-index more priority given to keep it on the top*/
+    transform-origin: top;
+    animation: bganim 2s forwards; 
+    /* Keeps the animation stick to the last step ---> image*/
+}
+
+@keyframes bganim{
+    0%,
+    50%{
+        transform: scaleY(1); 
+        /* changes the size of the element along Y axis--> -ve value is flip*/
+    }
+    100%{
+        transform: scaleY(0);
+    }
+    
+}
+
