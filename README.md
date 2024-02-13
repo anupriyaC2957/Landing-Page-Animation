@@ -1,2 +1,3 @@
 # Landing-Page-Animation
 The CSS code implements a landing page animation. It employs keyframe animations, gradients, clip-path transformations, and background effects to create an engaging entrance or landing experience for a webpage.
+The main elements include a container, a landing section with a background image of a fox, a gradient overlay for a semi-transparent effect, and a creative clip-path animation for transitioning the background. Additionally, an additional background element with a color overlay is introduced to enhance the visual appeal. The animations create an engaging entrance with a clipping path transformation and a background scale effect. The overall design aims for a captivating and smooth visual experience during the landing phase of the webpage.
